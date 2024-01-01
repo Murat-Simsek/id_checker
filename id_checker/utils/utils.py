@@ -61,7 +61,7 @@ def calculate_distance(bbox1, bbox2):
 
 
 # Function to check if two bounding boxes are in the same zone
-def is_same_zone(bbox1, bbox2, coord_threshold=35):
+def is_same_zone(bbox1, bbox2, coord_threshold=55):
     cord1 = [bbox1[0], bbox1[3]]
     cord2 = [bbox2[0], bbox2[3]]
     for coordinate1, coordinate2 in zip(cord1, cord2):
@@ -77,7 +77,7 @@ def find_matching_text(easyocr_results, bounding_boxes):
 
     for key, reference_bbox in bounding_boxes.items():
         for result in easyocr_results:
-            if is_same_zone(result[0], reference_bbox[0], coord_threshold=35):
+            if is_same_zone(result[0], reference_bbox[0], coord_threshold=55):
                 matches.append([key, result[1], result[0], result[2], reference_bbox[1]])
     return matches
 

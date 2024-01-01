@@ -18,7 +18,7 @@ def send_image(filename):
 
 
 # Specify the path to the image file
-image_filename = 'front.jpg'
+image_filename = 'test1.jpg'
 
 # Call the function to send the image
 send_image(image_filename)

@@ -93,7 +93,7 @@ def image_reader():
         ocr_all = []
         for t in ocr_results:
             ocr_all.append(t)
-        filter_boxes_results = filter_boxes(ocr_all, min_text_confidence=75)
+        filter_boxes_results = filter_boxes(ocr_all, min_text_confidence=45)
 
         extracted_text = find_matching_text(filter_boxes_results, dict_boxes)
 
